@@ -472,3 +472,172 @@ select p.name
 from projects p
 left join employee_projects ep on p.proj_id = ep.proj_id
 where ep.emp_id is null;
+
+P2, Phase-2
+
+Q-1,
+SELECT 
+    order_id,
+    order_date::time AS order_time
+FROM orders;
+
+Q-2,
+SELECT order_id, order_date::time AS time_only
+FROM orders;
+
+Q-3,
+SELECT order_id, EXTRACT(YEAR FROM order_date) AS year
+FROM orders;
+
+Q-4,
+SELECT order_id, EXTRACT(MONTH FROM order_date) AS month
+FROM orders;
+
+Q-5,
+SELECT order_id, TO_CHAR(order_date,'Month') AS month_name
+FROM orders;
+
+Q-6,
+SELECT order_id, EXTRACT(DAY FROM order_date) AS day
+FROM orders;
+
+Q-7,
+SELECT order_id, EXTRACT(DOW FROM order_date) AS weekday_number
+FROM orders;
+
+Q-8
+SELECT *
+FROM orders
+WHERE order_date > '2025-04-01';
+
+Q-9,
+SELECT order_id,
+delivery_date - order_date AS delivery_time
+FROM orders;
+
+Q-10,
+SELECT AVG(delivery_date - order_date) AS avg_delivery_time
+FROM orders;
+
+Q-11,
+SELECT order_id,
+delivery_date - order_date AS delivery_time
+FROM orders
+WHE delivery_date - order_date > INTERVAL '3 days';
+
+Q-12,
+SELECT order_id,
+TO_CHAR(order_date,'Day') AS weekday_name
+FROM orders;
+
+Q-13
+SELECT 
+EXTRACT(MONTH FROM order_date) AS month,
+COUNT(order_id) AS total_orders
+FROM orders
+GROUP BY EXTRACT(MONTH FROM order_date);
+
+Q-14,
+SELECT
+EXTRACT(MONTH FROM order_date) AS month,
+SUM(amount) AS total_sales
+FROM orders
+GROUP BY EXTRACT(MONTH FROM order_date);
+
+Q-15,
+SELECT
+EXTRACT(HOUR FROM order_date) AS order_hour,
+COUNT(order_id) AS total_orders
+FROM orders
+GROUP BY EXTRACT(HOUR FROM order_date)
+ORDER BY total_orders DESC
+LIMIT 1;
+
+Q-16,
+SELECT
+customer_id,
+COUNT(order_id) AS total_orders
+FROM orders
+GROUP BY customer_id
+HAVING COUNT(order_id) > 1;
+
+Q-17,
+SELECT
+customer_id,
+MIN(order_date) AS first_order,
+MAX(order_date) AS last_order
+FROM orders
+GROUP BY customer_id;
+
+Q-18,
+SELECT
+order_id,
+CASE
+WHEN delivery_date - order_date <= INTERVAL '2 days'
+THEN 'Fast'
+ELSE 'Slow'
+END AS status
+FROM orders;
+
+Q-19,
+SELECT
+TO_CHAR(order_date,'Day') AS weekday,
+COUNT(order_id) AS total_orders
+FROM orders
+GROUP BY TO_CHAR(order_date,'Day')
+ORDER BY total_orders DESC
+LIMIT 1;
+
+Q-20,
+SELECT
+customer_id,
+COUNT(order_id) AS total_orders,
+SUM(amount) AS total_spent,
+MIN(order_date) AS first_order,
+MAX(order_date) AS last_order
+FROM orders
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
