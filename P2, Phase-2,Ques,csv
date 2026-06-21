@@ -1,0 +1,21 @@
+Question_No,Level,SQL_Practice_Question
+1,Beginner,Extract only date from order_date
+2,Beginner,Extract only time from order_date
+3,Beginner,Extract year from order_date
+4,Beginner,Extract month number from order_date
+5,Beginner,Extract month name from order_date using TO_CHAR()
+6,Beginner,Extract day number from order_date
+7,Beginner,Extract weekday number from order_date using EXTRACT(DOW FROM order_date)
+8,Beginner,"Find all orders placed after April 1, 2025"
+9,Intermediate,Calculate delivery time between order_date and delivery_date
+10,Intermediate,Find average delivery time of all orders
+11,Intermediate,Find orders where delivery took more than 3 days using INTERVAL '3 days'
+12,Intermediate,"Extract weekday name from order_date using TO_CHAR(order_date,'Day')"
+13,Intermediate,"Count total orders month-wise using EXTRACT(), COUNT(), GROUP BY"
+14,Intermediate,Find total sales month-wise using SUM() and EXTRACT()
+15,Intermediate,Find the hour when maximum orders were placed using EXTRACT(HOUR FROM order_date)
+16,Advanced,Find customers who ordered more than once using GROUP BY and HAVING COUNT()
+17,Advanced,Find first and last order date of every customer using MIN() and MAX()
+18,Advanced,"Create delivery status column: Delivery <= 2 days Fast, >2 days Slow"
+19,Advanced,"Find the busiest weekday using TO_CHAR(), COUNT(), GROUP BY"
+20,Advanced,"Create customer summary report using COUNT(), SUM(), MIN(), MAX()"
