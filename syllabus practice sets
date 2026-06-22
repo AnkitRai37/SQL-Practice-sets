@@ -597,6 +597,123 @@ MIN(order_date) AS first_order,
 MAX(order_date) AS last_order
 FROM orders
 
+P2,Phase-3
+
+Q-1,
+SELECT emp_id, emp_name, dept_id, salary,
+       AVG(salary) OVER(PARTITION BY dept_id) AS dept_avg_sal
+FROM employees;
+
+Q-2,
+SELECT order_id, customer_id, order_date, amount,
+       SUM(amount) OVER(
+           ORDER BY order_date 
+           ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+       ) AS running_totals
+FROM orders;
+
+Q-3,
+SELECT student_id, student_name, class_id, marks,
+       MAX(marks) OVER(PARTITION BY class_id) AS high_marks
+FROM students;
+
+Q-4,
+SELECT product_id, product_name, category_id, sales,
+       SUM(sales) OVER(PARTITION BY product_id) AS total_sales
+FROM products;
+
+Q-5,
+SELECT emp_id, emp_name, dept_id, salary,
+       RANK() OVER(PARTITION BY dept_id ORDER BY salary DESC) AS emp_rank
+FROM employees;
+
+Q-6,
+SELECT order_id, customer_id, order_date, amount,
+       AVG(amount) OVER(ORDER BY order_date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS cumulative_avg
+FROM orders;
+
+Q-7,
+SELECT student_id, student_name, class_id, marks,
+       ROW_NUMBER() OVER(PARTITION BY class_id ORDER BY marks DESC) AS row_num_marks
+FROM students;
+
+Q-8,
+SELECT emp_id, emp_name, dept_id, salary,
+       AVG(salary) OVER(PARTITION BY dept_id) AS dept_avg_sal,
+       salary - AVG(salary) OVER(PARTITION BY dept_id) AS diff_from_avg
+FROM employees;
+
+Q-8,
+SELECT order_id, customer_id, order_date, amount,
+       AVG(amount) OVER(ORDER BY order_date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS last_3_orders
+FROM orders;
+
+Q-10,
+SELECT product_id, product_name, category_id, sales,
+       SUM(sales) OVER(PARTITION BY category_id) AS category_total,
+       sales * 100.0 / SUM(sales) OVER(PARTITION BY category_id) AS percent_contribution
+FROM products;
+
+Q-11,
+SELECT emp_id, emp_name, dept_id, salary,
+       DENSE_RANK() OVER(ORDER BY salary DESC) AS dense_rank
+FROM employees;
+ 
+Q-12,
+SELECT order_id, customer_id, order_date, amount,
+       LAG(amount) OVER(ORDER BY order_date) AS prev_order,
+       amount - LAG(amount) OVER(ORDER BY order_date) AS diff_from_prev
+FROM orders;
+
+Q-13,
+SELECT order_id, customer_id, order_date, amount,
+       LEAD(amount) OVER(ORDER BY order_date) AS next_order_amount
+FROM orders;
+
+Q-14,
+SELECT student_id, student_name, exam_date, marks,
+       MAX(marks) OVER(ORDER BY exam_date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS running_max
+FROM students;
+
+Q-15,
+SELECT emp_id, emp_name, dept_id, salary,
+       PERCENT_RANK() OVER(ORDER BY salary) AS perc_rank
+FROM employees;
+
+Q-16,
+SELECT product_id, product_name, category_id, sales,
+       CUME_DIST() OVER(ORDER BY sales DESC) AS cum_dist
+FROM products;
+
+Q-17,
+SELECT order_id, customer_id, order_date, amount,
+       SUM(amount) OVER(ORDER BY order_date RANGE BETWEEN INTERVAL '7 days' PRECEDING AND CURRENT ROW) AS moving_sum
+FROM orders;
+
+Q-18,
+SELECT student_id, student_name, class_id, marks,
+       MAX(marks) OVER(PARTITION BY class_id) AS class_max,
+       MAX(marks) OVER(PARTITION BY class_id) - marks AS diff_from_max
+FROM students;
+
+Q-19,
+SELECT emp_id, emp_name, dept_id, salary,
+       NTH_VALUE(salary, 3) OVER(
+           PARTITION BY dept_id 
+           ORDER BY salary DESC 
+           ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+       ) AS nth_sal
+FROM employees;
+
+Q-20,
+SELECT order_id, customer_id, order_date, amount,
+       SUM(amount) OVER() AS total_sales,
+       amount * 1.0 / SUM(amount) OVER() AS ratio_to_total
+FROM orders;
+
+
+
+
 
 
 
