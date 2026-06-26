@@ -1,93 +1,149 @@
-%PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
-1 0 obj
-<<
-/F1 2 0 R /F2 3 0 R
->>
-endobj
-2 0 obj
-<<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
->>
-endobj
-3 0 obj
-<<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
->>
-endobj
-4 0 obj
-<<
-/Contents 9 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 8 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
 
->> 
-  /Type /Page
->>
-endobj
-5 0 obj
-<<
-/Contents 10 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 8 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
+select * ,
+avg(salary) over (partition by department_id ) 
+as avg_dept_sal
+from employees
 
->> 
-  /Type /Page
->>
-endobj
-6 0 obj
-<<
-/PageMode /UseNone /Pages 8 0 R /Type /Catalog
->>
-endobj
-7 0 obj
-<<
-/Author (\(anonymous\)) /CreationDate (D:20260626033155+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260626033155+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
->>
-endobj
-8 0 obj
-<<
-/Count 2 /Kids [ 4 0 R 5 0 R ] /Type /Pages
->>
-endobj
-9 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1080
->>
-stream
-Gasao>BALZ&:WeDlq>BpUN1/g?^O#;`0iA(KGZY=c7j</#:nFU[Q1X`2#k9?EsY=3K\O<1Vb\i1\%>aMimVX+(HK9B%0'R:?r;_%_<Udk&<@un49'N+/^j7,GC.g]GV6/_I$tEA=GiV?ace.eXCF.RZ0WUbDNX=<lOJ4n`&[Ben.iXoo+cUrG!C^'UWM'B&%MU&)9/G`aUG%DJDZ+?"iO1JIg5T6?3P=&$fdOi(kk6q66'6j6f@cd<PEK[_7[BIFTETJpbtiR1l7??F;mV4i?nIo1eb`+%M(i^r"_]lY%,a1g6dPsR?0E^jHct9Y1SVg=(U9Yk8.K0nW"s&0T$V+mNC;?@/N0X]e/MQ`!Gp-)T4CfA)cN&P'NB,,@\u%j*#RS9oKBSR6`7(Fu4E8(fQR1DZ$*?gqh7S;dC6Y7XBKr98m*#"l&gOk4a[O;\s8XM;Hk^4u'4GkM?-,oj?V&C+0cJ[$3K"ZUnHPPq;MiOIVt7R,ieG$JS=AQZXH9SBGc2H6Q(A?o"]Qh(L+h/9U1:$aEAtkQ-M!brIi+DDBi0qK5W,fE\'5DKg]SBl3%kG.nH,>>-Y);'"`*@e()kkodaKSWDM7cK)X$Fb3VjAUS>YS+drk>X:#DXK#$QKE#QZHeQQ/pf2`E)Z-k2Wq(tBF]0\Y,4U&_ib(\YdqpL*`HS]S^VNZM-n&r=%Sh+tZ@$-%:t1g"CJEb2qo(#g[G(_,Y1=\H,*V@1MIQ4WegbQ?O]CZ9\PSIlWjRg7PP&ps.*R86=#$gGRFDUM9O%Bs1$rpm`Iqu/QK%SNft]hTR=3/S1c&`Z=g%99hAHbWqesI(lt@;j4r^A5=`CHAdb!<RLi8e0CB^[O`mX`K8n!NWd0p"aT:?EJ/.q]pj<@S@C7aYZpNWiQfXIrKI$k]Q(RQ`=M`8E'dono%V<&)([Rg.VF&"0dG%6l@b$kZ1R7ooD*8!&:\E#_iq5CB_31/[<4ZVoGFX]6(9d_<UbgiFoWVT\,M`Op(Z=gmGjE<Z8CQKhdQitqihAGW$N3c-j(&om=N*t*u=HPGiBsp\q+ue)SfRfR;[-,@,@.t]*quJ@AFpe~>endstream
-endobj
-10 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 889
->>
-stream
-Gasan9lJc?%)(h*n1l+,=tb'I`&Vu_"U=VGXZ7.6'T96(>*:DXC%Ld`=`Wj[6TYDV@$u<dhg;.tR*dSSrX0&%Gls[V;b/^sll]RZ$eX7N\'<uZP/bRC%bIb(1<\90h3`T"2n7=+1?XbV1W(QG0$ogr_Wif!Q]SA98Ic\2p_i-6553BI0O5sn<S40\#=)<hckt$^_EDL6B#1bk/MP/[<<u>]<l[#0"5tdFb[IKq+h<-JDqKGjl#d%lR<eq!9s"psTeF8_6?r]BJ7HKUPGfI;%j$Xg0/"!KeKu!)%7bJ2)=!ru.8<l1d7XE]p'>JqL6WV8J4\Q0VPZ_"6K3O+9&R]m;(>s]oF%TuDLITVBrl*\YNDY'U1VunQ<E:A'hDr.lk-KirN7+YM-Thu*iJg6\p1kIk00e86*-&:W3jOr0*pQZ9;PPRYf3&g3[6"q2mfjh#;o[CD'VU9]hmfUb-!h&2B9q.r6W59SL*c%;;/Jnp[U4U$ED)j(0W^C[]L32#a*^h+)[%Adk_*1_J#[MduR+5l7cn$$)hZUI-j[*Cl,;&ZqMY\_AOM0n%"(/h$smo+so&j+-l+u2$WeA[l.J"]`ufA'$SZ8fIEg%$=DVYQUcZB4_9%P0FtBk;iBLC*Ejc3$;$`^ZD[ooWE?30`se%?nWc\MptY^`:9A`XpP]SBfe0tPb%;mUV)3U-:+1r+ME8!+NR>/cX)h7rqsn!j;1HdhoZUu:\Zg^!iddS<N-+a$[E!&19PEqg$91+L0Gq-YdbX:tS5P=(o+?@Lk&9:EXJ%q%08TQ2Lr.*T(\WF/:".:8\e:n)3_m>KSf<+m\=\!\nrG/gU3SSSE5<YtE#]'pJBqir=l0bq]&1YM)1(Umh"=Ti3i_g\q([HB+$USf\G~>endstream
-endobj
-xref
-0 11
-0000000000 65535 f 
-0000000061 00000 n 
-0000000102 00000 n 
-0000000209 00000 n 
-0000000314 00000 n 
-0000000517 00000 n 
-0000000721 00000 n 
-0000000789 00000 n 
-0000001069 00000 n 
-0000001134 00000 n 
-0000002305 00000 n 
-trailer
-<<
-/ID 
-[<f8b8674b6371d60b65c68cbde8a3d973><f8b8674b6371d60b65c68cbde8a3d973>]
-% ReportLab generated PDF document -- digest (opensource)
+select *,
+sum(amount) over(order by order_date rows between 
+unbounded preceding and current row)
+as total_com_sales
+from orders
 
-/Info 7 0 R
-/Root 6 0 R
-/Size 11
->>
-startxref
-3285
-%%EOF
+select students student_id, student_name,
+class_id, marks,
+max(marks) over (partition by class_id)
+as high_marks
+from students
+
+select *,
+sum(sales) over(partition by category_id)
+as total_sales
+from products
+
+select * ,
+rank() over(partition by department_id 
+order by salary desc)
+as emp_rank
+from employees
+
+select *,
+avg(salary) over(partition by department_id) 
+as dept_avg_sal
+from employees
+
+select * ,
+avg(amount) 
+over(order by order_date rows between 2
+preceding and current row)
+as moving_avg
+from orders
+
+select * ,
+sum(sales) 
+over(partition by category_id) 
+as category_sales,
+(sales * 100 / sum(sales) 
+over(partition by category_id))
+as perc_cate_sales
+from products
+
+select * ,
+rank()
+over(order by salary desc) as emp_rank
+from employees
+
+-----------------------------------------------------
+
+SELECT *
+FROM (
+    SELECT emp_id, emp_name, department_id, salary,
+           RANK() OVER(PARTITION BY department_id ORDER BY salary DESC) AS sal_rank
+    FROM employees
+) ranked
+WHERE sal_rank <= 3;
+
+
+select * 
+from(
+select emp_id, emp_name,
+department_id, salary,
+rank() over(partition by department_id
+order by salary desc) as high_sal_emp
+from employees ) 
+ranked --name of this sub-query
+where high_sal_emp = 2
+
+select * 
+from( select emp_id, emp_name, department_id, salary , 
+rank() over(partition by department_id 
+order by salary desc) as high_sal
+from employees )
+ranked --name of this sub-query
+where high_sal = 3
+
+select * 
+from (select  emp_id, emp_name, 
+department_id, salary,
+rank () over(order by salary) as high_sal
+from employees)
+ranked -- sub-query name
+where high_sal <= 5
+----------------------------------------------------
+qoes - 12
+select * ,
+lag(amount) 
+over(order by order_date )
+as each_order,
+amount - lag(amount) over(order by order_date ) 
+ as diffrence
+from orders
+
+select * ,
+lead(amount)
+over(order by order_date) as next_ord_amt
+from orders
+
+select * ,
+max(marks)
+over(order by exam_date 
+rows between unbounded preceding and current row)
+as high_marks
+from students
+
+select * ,
+percent_rank()
+over(order by salary) as percentile_rank
+from employees
+
+select * 
+from(
+select emp_id, emp_name,
+department_id, salary, dense_rank()
+over(partition by department_id
+order by salary desc)
+as high_sal
+from employees)
+ranked
+where high_sal <= 3
+
+select * ,
+avg(salary)
+over(partition by department_id) as avg_sal
+from employees
+where salary > avg(salary)
+over(partition by department_id)
+
+select * 
+from (select emp_id, emp_name, department_id, salary,
+dense_rank() over(order by salary) as sal_rank
+from employees)
+ranked
+where sal_rank = 2
+
+select * from
+(select emp_id, emp_name, department_id, salary,
+max(salary) over(partition by department_id) 
+as max_sal from employees )
+ranked
+where salary = max_sal
